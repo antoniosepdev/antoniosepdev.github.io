@@ -22,7 +22,7 @@ ul {
     background-color: #111;
   }
 
-.foto_perfil{
+#foto_perfil{
   padding-top: 0.5rem;
   padding-left: 0.5rem;
   width: 150px;
@@ -33,10 +33,10 @@ ul {
   border-radius:10%;
 }
 
-.education_year{
+#education_year{
   text-align:right;
 }
 
-.education_university{
+#education_university{
   display:block;
 }
