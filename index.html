@@ -1,103 +1,121 @@
 <!DOCTYPE html>
 <html>
   <head>
-<!--    <link rel="stylesheet" href="Content/css/styles.css">
--->
-  <link rel="stylesheet" href="Content/css/estilos.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Content/css/estilos.css">
+  </head>
 
-</head>
   <body>
-    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px;" id="sidebar">
-      <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-      <a href="#home" class="w3-bar-item w3-button">Inicio</a>
-      <a href="#bibliografia" class="w3-bar-item w3-button">Sobre mí</a>
-      <a href="#educacion" class="w3-bar-item w3-button">Educación</a>
-      <a href="#habilidades" class="w3-bar-item w3-button">Habilidades</a>
-      <a href="#proyectos" class="w3-bar-item w3-button">Proyectos</a>
-      <a href="#proyectos" class="w3-bar-item w3-button">Contacto</a>
+    <ul>
+      <button class="openbtn" onclick="openNav()">☰</button>
+    </ul>
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+      <a href="#home">Inicio</a>
+      <a href="#bibliografia">Sobre mí</a>
+      <a href="#educacion">Educación</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#proyectos">Contacto</a>
+  </div>
+
+  <div class="home" id="home">
+    <img src="Content/image/perfil.png" class="foto_perfil">
+    <h1>Antonio Sepúlveda</h1>
+    <h4>Ingeniero en computación e informática</h4>
+  </div>
+
+  <div class="bibliografia">
+    <h2 class="subtitulo">Sobre mí</h2>
+
+    <div class="bibliografia_cuadro">
+      <p>
+        Soy ingeniero informático recién titulado, con
+        ganas de encontrar mi especialidad busco desarrollarme
+        como profesional en empresas con áreas de TI.
+        Entre estas áreas me encuentro interesado en el desarrollo
+        de software, la gestión de proyectos y la ciberseguridad.  
+      </p><br>
+      <p>
+        Respecto a mis habilidades destaco mi capacidad de confrontar
+        los problemas que se presenten en la eventualidad, siempre
+        poniendo en práctica las habilidades blandas que, a su vez,
+        las utilizo usando mis facultades proactivas, autónomas y
+        creativas.  
+      </p><br>
+      <p>
+        Cabe destacar que gracias a mis estudios y prácticas puedo
+        lograr a comprender y utilizar variado tipo de metodologías,
+        herramientas y técnicas para la gestión y realización de
+        proyectos."   
+      </p>
+    </div>
+</div>
+
+  <div class="educacion" id="educacion">
+    <h2>Educación</h2>
+    <div class="linea-tiempo">
+      <div class="momento">
+        <h3>2021</h3>
+        <div class="descripcion">
+          Me titulo en ingeniería en computación e informática en la Universidad Andrés Bello
+        </div>
+      </div>
+      <div class="momento">
+        <h3>2020</h3>
+        <div class="descripcion">
+          Realizo primeros certificados digitales en IBM
+        </div>
+      </div>
+      <div class="momento">
+        <h3>2016</h3>
+        <div class="descripcion">
+          Inicios de estudios en ingeniería en informática en la Universidad Andrés Bello
+        </div>
+      </div>
+      <div class="momento">
+        <h3>2015</h3>
+        <div class="descripcion">
+          Certificación de enseñanza media concluida.
+        </div>
+      </div>
+
     </div>
 
-    <div class="w3-main" style="margin-left:200px">
-      <div class="w3-teal">
-        <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
-        <div class="w3-container">
-        </div>
-      </div>
+  </div>
 
+  <div class="habilidades" id="habilidades">
+    <h2 style="text-align:center">Habilidades</h2>
 
-      <div class="w3-container"> 
-        
-        <div style="text-align:center" class="home" id="home">
-          <img src="Content/image/perfil.png" class="foto_perfil">
-          <h1>Antonio Sepúlveda</h1>
-          <h4>Ingeniero en computación e informática</h4>
-      </div>
-  
-      <div class="bibliografia" id="bibliografia">
-        <h2 style="text-align:center">Sobre mí</h2>
-        <p>Soy ingeniero informático recién titulado, con
-          ganas de encontrar mi especialidad busco desarrollarme
-          como profesional en empresas con áreas de TI.
-          Entre estas áreas me encuentro interesado en el desarrollo
-          de software, la gestión de proyectos y la ciberseguridad.
-  
-          Respecto a mis habilidades destaco mi capacidad de confrontar
-          los problemas que se presenten en la eventualidad, siempre
-          poniendo en práctica las habilidades blandas que, a su vez,
-          las utilizo usando mis facultades proactivas, autónomas y
-          creativas.
-  
-          Cabe destacar que gracias a mis estudios y prácticas puedo
-          lograr a comprender y utilizar variado tipo de metodologías,
-          herramientas y técnicas para la gestión y realización de
-          proyectos. 
-        </p>
-      </div>
-  
-      <div class="educacion" id="educacion">
-        <h2 style="text-align:center">Educación</h2>
-  
-        <div>
-          <div>
-            <h3 class="education_year">2016-2021</h3>
-            <span class="education_university">Universidad Andrés Bello</span>
-          </div>
-          <div><h1>|</h1></div>
-          <div>
-            <h3>Ingeniería en computación e informática</h3>
-          </div>
-        </div>
-  
-      </div>
-  
-      <div class="habilidades" id="habilidades">
-        <h2 style="text-align:center">Habilidades</h2>
-  
-        <div>
-          <h3>Herramientas usadas para formación</h3>
-          
-        </div>
-      </div>
-  
-      <div class="proyectos" id="proyectos">
-        <h2 style="text-align:center">Proyectos</h2>
-      </div>
-
-      </div>
-
-
-
-
-    <script>
-      function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-      }
+    <div>
+      <h3>Herramientas usadas para formación</h3>
       
-      function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-      }
-      </script>
+    </div>
+  </div>
+
+  <div class="proyectos" id="proyectos">
+    <h2 style="text-align:center">Proyectos</h2>
+  </div>
+
+  <div class="contacto" id="contacto">
+    <h2 style="text-align:center">Contacto</h2>
+  </div>
+
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+    
+
 
   </body>
 </html>
