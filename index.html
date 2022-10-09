@@ -12,7 +12,6 @@
     <div id="navbar">
       <a class="openbtn" onclick="openNav()">☰</a>
     </div>
-
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
       <a href="#home">Inicio</a>
@@ -29,10 +28,16 @@
       <div>
          
       </div>
-      <img src="Content/image/perfil.png" class="foto_perfil">
-      <h1>Antonio Sepúlveda</h1>
-      <h4>Ingeniero en computación e informática</h4>
+      <div>
+        <img src="Content/image/perfil.png" class="foto_perfil">
+        <h1>Antonio Sepúlveda</h1>
+        <h4>Ingeniero en computación e informática</h4>  
+      </div><br>
+      <div>
+        <a class="button download_CV" href="./Content/pdf/CV - Antonio Sepúlveda.pdf">Descargar CV</a>
+      </div>
     </div>
+    <br>
   
     <div class="bibliografia section" id="bibliografia">
       <br>
@@ -215,28 +220,21 @@
     <div class="proyectos section" id="proyectos">
       <h2 style="text-align:center">Proyectos</h2>
 
-      <div class="proyecto_container bd-grid">
-        <div class="proyecto_img">
-          <div>
-            <a href="Proyectos/FMP_demo/Index.html">
-              <img src="Proyectos/FMP_demo/Content/img/imgs/FMP_img.png" alt>
-            </a>
-            <h3>Proyecto web "Fuel Monitoring Proyect"</h3>
-            <h3>Vista previa HTML</h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="proyecto_container bd-grid">
-        <div class="proyecto_img">
-          <div>
-            <a href="https://github.com/antoniosepdev/antoniosepdev.github.io/tree/main/Proyectos/Buses_Felices">
-              <img src="Proyectos/FMP_demo/Content/img/imgs/Buses_felices.png" alt>
-            </a>
-            <h3>Proyecto Java "Buses Felices"</h3>
-          </div>
-        </div>
-      </div>
+      <div class="container">
+        <div class="box">
+          <div class="box-row">
+            <div class="box-cell box1">
+              <a href="Proyectos/FMP_demo/Index.html">
+                <img src="./Content/image/Projects/FMP_img.png" alt>
+              </a>
+              <h3>App. web "FMP" Vista prevía HTML</h3>
+                    </div>
+            <div class="box-cell box2">
+              <a href="https://github.com/antoniosepdev/antoniosepdev.github.io/tree/main/Proyectos/Buses_Felices">
+                <img src="./Content/image/Projects/Buses_felices.png" alt>
+              </a>
+              <h3>Gestión de buses "Buses Felices" en Java</h3>
+              </div>
 
     </div>
   

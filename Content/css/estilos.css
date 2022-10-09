@@ -220,21 +220,38 @@ html {
 .home{
   display:block;
   text-align: center;
-  margin-bottom:300px;
+  margin-bottom:200px;
 }
 
 .home h1{
   color:green;
 }
 
+.button {
+  display: inline-block;
+  background-color: green;
+  color: #eee;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: .3s;
+}
+
+.download_CV{
+  width:10%;
+}
 
 .bibliografia ,.educacion ,.habilidades ,.proyectos ,.contacto{
   display:block;
-
 }
 
 h2{
   color:green;
+}
+
+.bibliografia{
+  display:block;
+  margin-top:100px;
 }
 
 .bibliografia h2{
@@ -296,12 +313,22 @@ h2{
   transition: .5s;
 }
 
-.proyecto_container {
-  justify-items: center;
+.proyectos .container .box .box-row{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 1rem 80px;
+  font-size: 1.2rem;
   row-gap: 2rem;
+  align-items: center;
 }
 
-.proyecto_img {
+.proyectos img {
+  width: 300px;
+  height: 250px;
   position: relative;
   overflow: hidden;
   border-radius: 0.5rem;
@@ -318,6 +345,7 @@ h2{
   text-align: center;
   font-size:20px;
 }
+
 .foto_perfil{
   width: 150px;
   height: 150px;
