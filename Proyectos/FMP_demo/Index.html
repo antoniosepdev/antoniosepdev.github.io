@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="description" content="Landing Page del aplicativo web" />
+        <link rel="stylesheet" href="./Content/css/Estilos_FMP.css">
+        <link rel="stylesheet" href="./Content/css/styles.css">
+    </head>
+
+    <body style="background-image: url(./Content/img/imgs/biometric-digital.jpg);background-size:cover;background-repeat:no-repeat">
+        <div>
+            <div id="navbar">
+                <a href="./Index.html">Inicio</a>
+                <a href="./About.html">Acerca</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#login" style="float:right">Login</a>
+              </div>
+          
+                <div class="container" id="Acomodar_pagina">
+                    <div style="text-align: center;">
+                        <img src="./Content/img/Logos/Fmp Logo.png" id="Logo_ladingpage" alt="Logo FMP" />
+                        <h2>Fuel Monitoring Project</h2>
+                    </div>
+                    <h3>Proyecto de gestión de registros para el control y monitoreo de flotas utilizados por una empresa.</h3>        
+                    <p>
+                        Fuel Monitoring Project es un proyecto que busca resolver la problemática de la falta de registros de información respecto a la flota de los vehículos
+                        utilizados en una empresa, con el fin de obtener a disposición en cualquier momento una información sincronizada de usuarios, vehículos, boletas y
+                        bitácoras para su debida gestión.
+                    </p>
+                    <p><a href="./About.html" class="btn btn-primary btn-lg">Saber más &raquo;</a></p>
+
+                    <footer>
+                        <span id="copyright">
+                            &copy;<script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script> - Todos los derechos reservados.
+                        </span>
+                    </footer>
+                </div>
+            </div>
+        <script>
+            window.onscroll = function() {myFunction()};
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+            function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            }
+        </script>
+    </body>
+</html>

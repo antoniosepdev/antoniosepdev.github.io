@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="~/Content/css/one-page-wonder.min.css" rel="stylesheet" type="text/css">
+<link href="~/Content/css/Estilos_FMP.css" rel="stylesheet" type="text/css">
+
+<style>
+    body {
+        background-image: url('../../Content/img/imgs/biometric-digital.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: sans-serif;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-family: 'Microsoft Sans Serif';
+    }
+
+    .dropbtn {
+        background-color: #101010;
+        color: #9d9d9d;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown {
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: fixed;
+        top: 55px;
+        left: -10px;
+        background-color: #1d1d1d;
+        height: 100%;
+        width: 180px;
+        overflow-x: hidden;
+    }
+
+    #Iconos_sidebar {
+        width: 25px;
+        height: 25px;
+        border-radius:10px;
+    }
+
+    .Texto_iconos_sidebar {
+        color: gray;
+        font-size: 18px;
+        font-family: sans-serif;
+    }
+
+    .navbar-collapse {
+        max-height: 4000vh !Important;
+        height: 4000vh;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 115px;
+        position: fixed;
+        z-index: 1;
+        top: 50px;
+        background-color: #1d1d1d;
+        overflow-x: hidden;
+    }
+
+        .sidenav a 
+        {
+            padding: 0px 10px 0px 10px;
+            text-decoration: none;
+            font-size: 10px;
+            color: #818181;
+            text-align: center;
+            display: block;
+        }
+
+    .list-group-item {
+        background-color: #1d1d1d;
+        border-top-color: darkorange;
+        border-bottom-color: darkorange;
+        border-left-color: #1d1d1d;
+        border-right-color: #1d1d1d;
+    }
+
+</style>
+
+<link rel="icon" href="~/Content/img/Logos/Fmp Logo.png" type="image/gif" sizes="16x16">
+<html lang="es">
+<head>
+    <meta name="description" content="Fuel Monitoring Project" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - FMP</title>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-toggle" style="float:left">
+                <div>
+                    <button onclick="DropDownOpciones()" class="dropbtn" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Center Align">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <div id="NavBarDropdown" class="dropdown-content list-group-item">
+                        @if (Session["User"] != null)
+                        {
+                            if (Session["Rol"].ToString() == "1")
+                            {
+                                <a href="~/Usuarios"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Usuarios.png" id="Iconos_sidebar" /> Usuarios</i></a><br /><br />
+                                <a href="~/Vehiculos"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Vehiculos.png" id="Iconos_sidebar" />Vehículos</i></a><br /><br />
+                                <a href="~/Asignacion_vehiculo"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Asign.png" id="Iconos_sidebar" /> Asignar</i></a><br /><br />
+                                <a href="~/Tarjeta_electronica"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Tarjetas.png" id="Iconos_sidebar" /> Tarjetas</i></a><br /><br />
+                                <a href="~/Boletas"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Boletas.png" id="Iconos_sidebar" /> Boletas</i></a><br /><br />
+                                <a href="~/Bitacoras"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Trayectos.png" id="Iconos_sidebar" /> Bitacoras</i></a><br /><br />
+                            }
+                            if (Session["Rol"].ToString() == "2")
+                            {
+                                if (Session["Pat"] != null)
+                                {
+                                    if (Session["Cup"] != null)
+                                    {
+                                        <a href="~/Boletas/Create"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Boleta_agregar.png" id="Iconos_sidebar" /> Crear boleta</i></a><br /><br />
+                                    }
+                                    else
+                                    {
+                                        <a>El vehículo no cuenta con una tarjeta</a>
+                                    }
+                                    <a href="~/Bitacoras/Create/@Session["IDBOL"]"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Trayecto_agregar.png" id="Iconos_sidebar" /> Crear trayecto</i></a><br /><br />
+                                    <a href="~/Vehiculos/CambiarEstado/@Session["Pat"]"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Icono_cambiarestado.png" id="Iconos_sidebar" /> Ver estado</i></a><br /><br />
+                                    <a href="~/Vehiculos/Details/@Session["Pat"]"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Ver_detalles.png" id="Iconos_sidebar" /> Ver vehículo</i></a><br /><br />
+                                    if (Session["Cup"] != null)
+                                    {
+                                        <a href="~/Tarjeta_electronica/Details/@Session["Pat"]"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Ver_detalles.png" id="Iconos_sidebar" /> Ver tarjeta</i></a><br /><br />
+                                    }
+                                    else
+                                    { }
+                                }
+                                else
+                                { }
+                            }
+                            <a>@Html.ActionLink("Acerca", "About", "Home", null, new { @class = "list-group-item Texto_iconos_sidebar", @style = "color:#797979;font-style:italic;" })</a><br /><br />
+                            <a>@Html.ActionLink("Contacto", "Contact", "Home", null, new { @class = "list-group-item Texto_iconos_sidebar", @style = "color:#797979;font-style:italic;" })</a><br /><br />
+                            <a>@Html.ActionLink("Cerrar sesión", "CerrarSesion", "Home", null, new { @class = "list-group-item Texto_iconos_sidebar", @style = "color:#797979;font-style:italic;" })</a><br /><br />
+                        }
+                        else
+                        {
+                            <a>@Html.ActionLink("Acerca", "About", "Home", null, new { @class = "list-group-item Texto_iconos_sidebar", @style = "color:#797979;font-style:italic;" })</a><br /><br />
+                            <a>@Html.ActionLink("Contacto", "Contact", "Home", null, new { @class = "list-group-item Texto_iconos_sidebar", @style = "color:#797979;font-style:italic;" })</a><br /><br />
+                            <a>@Html.ActionLink("Iniciar sesión", "Login", "Home", null, new { @class = "list-group-item Texto_iconos_sidebar", @style = "color:#797979;font-style:italic;" })</a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-header">
+                @if (Session["User"] != null)
+                {<a>@Html.ActionLink("FMP", "GUI", "Home", null, new { @class = "navbar-brand", @style = "float:left;" })</a>}
+            else
+            {<a>@Html.ActionLink("FMP", "Index", "Home", null, new { @class = "navbar-brand", @style = "float:left;" })</a>}
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Acerca", "About", "Home", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home", null, new { @class = "navbar-brand" })</li>
+                    @if (Session["User"] != null)
+                    {
+                        <li>@Html.ActionLink("Cerrar sesión", "CerrarSesion", "Home", null, new { @class = "navbar-brand" })</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Iniciar sesión", "Login", "Home", null, new { @class = "navbar-brand" })</li>
+                    }
+                </ul>
+            </div>
+        </div>
+        @if (Session["User"] != null)
+        {
+            if (Session["Rol"].ToString() == "1")
+            {
+                <div class="sidenav navbar-collapse collapse">
+                    <div>
+                        <a href="~/Home/GUI"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/Logos/Fmp Logo.png" id="Iconos_sidebar" /><br />Inicio</i></a><br />
+                        <a href="~/Usuarios"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Usuarios.png" id="Iconos_sidebar" /> Usuarios</i></a><br />
+                        <a href="~/Vehiculos"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Vehiculos.png" id="Iconos_sidebar" />Vehículos</i></a><br />
+                        <a href="~/Asignacion_vehiculo"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Asign.png" id="Iconos_sidebar" /> Asignar</i></a><br />
+                        <a href="~/Tarjeta_electronica"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Tarjetas.png" id="Iconos_sidebar" /> Tarjetas</i></a><br />
+                        <a href="~/Boletas"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Boletas.png" id="Iconos_sidebar" /> Boletas</i></a><br />
+                        <a href="~/Bitacoras"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Trayectos.png" id="Iconos_sidebar" /> Bitacoras</i></a><br /><br /><br />
+                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    </div>
+                </div>
+            }
+            if (Session["Rol"].ToString() == "2")
+            {
+                <div class="sidenav navbar-collapse collapse">
+                    <div>
+                        @if (Session["Pat"] != null)
+                        {
+                            <a href="~/Home/GUI"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/Logos/Fmp Logo.png" id="Iconos_sidebar" /><br />Inicio</i></a><br />
+
+                            if (Session["Cup"] != null)
+                            {
+                                <a href="~/Boletas/Create"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Boleta_agregar.png" id="Iconos_sidebar" />Registrar boleta</i></a><br />
+                            }
+                            <a href="~/Bitacoras/Create/@Session["IDBOL"]"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Trayecto_agregar.png" id="Iconos_sidebar" />Registrar trayecto</i></a><br />
+                            <a href="~/Vehiculos/CambiarEstado/@Session["Pat"]"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Icono_cambiarestado.png" id="Iconos_sidebar" />Modificar estado</i></a><br />
+                            <a href="~/Vehiculos/Details/@Session["Pat"]"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Ver_detalles.png" id="Iconos_sidebar" />Detalles vehículo</i></a><br />
+                            if (Session["Cup"] != null)
+                            {
+                                <a href="~/Tarjeta_electronica/Details/@Session["Pat"]"><i class="list-group-item Texto_iconos_sidebar"><img src="~/Content/img/iconos/Ver_detalles.png" id="Iconos_sidebar" />Detalles tarjeta</i></a><br />
+                            }
+                            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+                        }
+                        else
+                        {
+                            <div>No cuenta con una patente asignada.</div>
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+    <div class="container body-content" id="Acomodar_pagina">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - FMP</p>
+        </footer>
+    </div>
+
+    <script>
+        function DropDownOpciones() {
+            document.getElementById("NavBarDropdown").classList.toggle("show");
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    @section scripts{
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+    }
+    @RenderSection("scripts", required: false)
+</body>
+</html>

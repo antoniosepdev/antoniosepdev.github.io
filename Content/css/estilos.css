@@ -296,6 +296,16 @@ h2{
   transition: .5s;
 }
 
+.proyecto_container {
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+.proyecto_img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
 
 .contacto p, a{
   text-align: center;
