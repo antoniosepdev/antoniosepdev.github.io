@@ -238,7 +238,8 @@ html {
 }
 
 .download_CV{
-  width:10%;
+  width:30%;
+  display:inline-block;
 }
 
 .bibliografia ,.educacion ,.habilidades ,.proyectos ,.contacto{
@@ -324,11 +325,11 @@ h2{
   font-size: 1.2rem;
   row-gap: 2rem;
   align-items: center;
-}
+ }
 
 .proyectos img {
-  width: 300px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   position: relative;
   overflow: hidden;
   border-radius: 0.5rem;
