@@ -1,0 +1,13 @@
+--CREANDO TABLAS--
+
+create table bus(patente varchar(10), modelo varchar(30), año int, cant_asientos int, primary key (patente));
+
+create table vendedor(rut_vendedor varchar(15), nombre_vendedor varchar(30), direccion varchar(50), primary key (rut_vendedor));
+
+create table cliente(rut varchar(15), nombre varchar(30), direccion varchar(50));
+
+create table viaje(cod_viaje int, fecha varchar(10), patente_bus varchar(10), conductor varchar(30), origen varchar(50), destino varchar(50), precio int, cant_asientos int, pasaje_disp int, estado varchar(1), primary key (cod_viaje), foreign key (patente_bus) references bus(patente));
+
+create table pasaje(folio int, codigo_viaje int, fecha_vta varchar(10), rut_vendedor varchar(15), precio int, primary key (folio), foreign key (codigo_viaje) references viaje(patente_bus), foreign key (rut_vendedor) references vendedor(rut_vendedor));
+
+--Estas Tablas son insertadas en phpMyAdmin (MySQL)
