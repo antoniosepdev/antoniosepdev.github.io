@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="stylesheet" href="Content/css/estilos.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+
   </head>
 
   <body>
-    <ul>
-      <button class="openbtn" onclick="openNav()">☰</button>
-    </ul>
+    <div id="navbar">
+      <a class="openbtn" onclick="openNav()">☰</a>
+    </div>
 
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
@@ -20,90 +23,265 @@
       <a href="#proyectos">Contacto</a>
   </div>
 
-  <div class="home" id="home">
-    <img src="Content/image/perfil.png" class="foto_perfil">
-    <h1>Antonio Sepúlveda</h1>
-    <h4>Ingeniero en computación e informática</h4>
-  </div>
 
-  <div class="bibliografia">
-    <h2 class="subtitulo">Sobre mí</h2>
-
-    <div class="bibliografia_cuadro">
-      <p>
-        Soy ingeniero informático recién titulado, con
-        ganas de encontrar mi especialidad busco desarrollarme
-        como profesional en empresas con áreas de TI.
-        Entre estas áreas me encuentro interesado en el desarrollo
-        de software, la gestión de proyectos y la ciberseguridad.  
-      </p><br>
-      <p>
-        Respecto a mis habilidades destaco mi capacidad de confrontar
-        los problemas que se presenten en la eventualidad, siempre
-        poniendo en práctica las habilidades blandas que, a su vez,
-        las utilizo usando mis facultades proactivas, autónomas y
-        creativas.  
-      </p><br>
-      <p>
-        Cabe destacar que gracias a mis estudios y prácticas puedo
-        lograr a comprender y utilizar variado tipo de metodologías,
-        herramientas y técnicas para la gestión y realización de
-        proyectos."   
-      </p>
+  <div class="main">
+    <div class="home section"  id="home">
+      <div>
+         
+      </div>
+      <img src="Content/image/perfil.png" class="foto_perfil">
+      <h1>Antonio Sepúlveda</h1>
+      <h4>Ingeniero en computación e informática</h4>
     </div>
-</div>
-
-  <div class="educacion" id="educacion">
-    <h2>Educación</h2>
-    <div class="linea-tiempo">
-      <div class="momento">
-        <h3>2021</h3>
-        <div class="descripcion">
-          Me titulo en ingeniería en computación e informática en la Universidad Andrés Bello
-        </div>
+  
+    <div class="bibliografia section" id="bibliografia">
+      <br>
+      <h2>Sobre mí</h2>
+  
+      <div class="bibliografia_cuadro">
+        <p>
+          Soy ingeniero informático recién titulado, con
+          ganas de encontrar mi especialidad busco desarrollarme
+          como profesional en empresas con áreas de TI.
+          Entre estas áreas me encuentro interesado en el desarrollo
+          de software, la gestión de proyectos y la ciberseguridad.  
+        </p><br>
+        <p>
+          Respecto a mis habilidades destaco mi capacidad de confrontar
+          los problemas que se presenten en la eventualidad, siempre
+          poniendo en práctica las habilidades blandas que, a su vez,
+          las utilizo usando mis facultades proactivas, autónomas y
+          creativas.  
+        </p><br>
+        <p>
+          Cabe destacar que gracias a mis estudios y prácticas puedo
+          lograr a comprender y utilizar variado tipo de metodologías,
+          herramientas y técnicas para la gestión y realización de
+          proyectos."   
+        </p>
       </div>
-      <div class="momento">
-        <h3>2020</h3>
-        <div class="descripcion">
-          Realizo primeros certificados digitales en IBM
-        </div>
-      </div>
-      <div class="momento">
-        <h3>2016</h3>
-        <div class="descripcion">
-          Inicios de estudios en ingeniería en informática en la Universidad Andrés Bello
-        </div>
-      </div>
-      <div class="momento">
-        <h3>2015</h3>
-        <div class="descripcion">
-          Certificación de enseñanza media concluida.
-        </div>
-      </div>
-
     </div>
-
-  </div>
-
-  <div class="habilidades" id="habilidades">
-    <h2 style="text-align:center">Habilidades</h2>
-
-    <div>
-      <h3>Herramientas usadas para formación</h3>
-      
+  
+    <div class="educacion section" id="educacion">
+      <h2>Educación</h2>
+      <div class="linea-tiempo">
+        <div class="momento">
+          <h3>2016-2021</h3>
+          <h4>Universidad Andrés Bello</h4>
+          <div class="descripcion">
+            Egreso y titulación de Ingeniería en computación e informática.
+          </div>
+        </div>
+        <div class="momento">
+          <h3>2020</h3>
+          <h4>IBM</h4>
+          <div class="descripcion">
+            Medallas de Big Data Foundations, Data Science Foundations and Applied with Python - Level 2.
+          </div>
+        </div>
+        <div class="momento">
+          <h3>2011-2015</h3>
+          <div class="descripcion">
+            Certificación de enseñanza media concluida.
+          </div>
+        </div>
+  
+      </div>
+  
     </div>
-  </div>
+  
+    <div class="habilidades section" id="habilidades">
+      <h2>Habilidades</h2>
+      <br>
+  
+      <h3>Lenguajes trabajados durante formación</h3>
+      <div class="container">
+        <div class="box">
+          <div class="box-row">
+            <div class="box-cell box1">
+              <img src="Content/image/Logos/html5.png">
+              <h3>HTML5</h3>
+            </div>
+            <div class="box-cell box2">
+              <img src="Content/image/Logos/css.png">
+              <h3>CSS</h3>
+            </div>
+            <div class="box-cell box1">
+              <img src="Content/image/Logos/JavaScript.png">
+              <h3>JavaScript</h3>
+            </div>
+            <div class="box-cell box2">
+              <img src="Content/image/Logos/Python.png">
+              <h3>Python</h3>
+            </div>
+            <div class="box-cell box1">
+              <img src="Content/image/Logos/Django.png">
+              <h3>Django</h3>
+            </div>
+            <div class="box-cell box2">
+              <img src="Content/image/Logos/C++.png">
+              <h3>C++</h3>
+            </div>
+            <div class="box-cell box1">
+              <img src="Content/image/Logos/CSharp.png">
+              <h3>C#</h3>
+            </div>
+            <div class="box-cell box2">
+              <img src="Content/image/Logos/Java.png">
+              <h3>Java</h3>
+            </div>
+            <div class="box-cell box1">
+              <img src="Content/image/Logos/SQL.png">
+              <h3>SQL</h3>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <br><br>
+  
+      <h3>Herramientas usadas durante formación</h3>
+      <div class="container">
+        <div class="box">
+          <div class="box-row">
+            <div class="box-cell box1">
+              <img src="Content/image/Logos/MySQL.png">
+              <h3>MySQL</h3>
+            </div>
+            <div class="box-cell box2">
+              <img src="Content/image/Logos/Microsoft_SQL_Server.png">
+              <h3>SQL Server</h3>
+            </div>
+            <div class="box-cell box1">
+              <img src="Content/image/Logos/_.NET.png">
+              <h3>.NET</h3>
+            </div>
+            <div class="box-cell box2">
+              <img src="Content/image/Logos/asp.net.png">
+              <h3>Asp.net</h3>
+            </div>
+            <div class="box-cell box1">
+              <img src="Content/image/Logos/NetBeans.png">
+              <h3>Netbeans</h3>
+            </div>
+            <div class="box-cell box2">
+              <img src="Content/image/Logos/Visual-Studio.png">
+              <h3>Visual Studio</h3>
+            </div>
+            <div class="box-cell box1">
+              <img src="Content/image/Logos/Visual_Studio_Code.png">
+              <h3>Visual Studio Code</h3>
+            </div>
+            <div class="box-cell box2">
+              <img src="Content/image/Logos/Bitbucket.png">
+              <h3>Bitbucket</h3>
+            </div>
+            <div class="box-cell box1">
+              <img src="Content/image/Logos/GitLab.png">
+              <h3>GitLab</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+  
+  
+      <h3>Metodologías usadas durante formación</h3>
+      <div class="container">
+        <div class="box">
+          <div class="box-row">
+            <div class="box-cell box1">
+              <img src="Content/image/Logos/Cascade.png">
+              <h3>Cascada</h3>
+            </div>
+            <div class="box-cell box2">
+              <img src="Content/image/Logos/iterative.png">
+              <h3>Iterativo incremental</h3>
+            </div>
+            <div class="box-cell box1">
+              <img src="Content/image/Logos/Scrum.png">
+              <h3>Scrum</h3>
+            </div>
+            <div class="box-cell box2">
+              <img src="Content/image/Logos/Lean_ux.png">
+              <h3>Lean Ux</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  
+    <div class="proyectos section" id="proyectos">
+      <h2 style="text-align:center">Proyectos</h2>
 
-  <div class="proyectos" id="proyectos">
-    <h2 style="text-align:center">Proyectos</h2>
-  </div>
+      <p>Muy pronto.</p>
+    </div>
+  
+    <div class="contacto section" id="contacto">
+      <h2 style="text-align:center">Contacto</h2>
+      <br>
+  
+      <div class="bibliografia_cuadro">
+        <div>
+          <div>
+            <i class='bx bx-user'></i>
+            <span>Antonio Sepúlveda</span>
+          </div>
+          <br>
 
-  <div class="contacto" id="contacto">
-    <h2 style="text-align:center">Contacto</h2>
+          <div>
+            <i class='bx bx-envelope'></i>
+            <span style="font-size:15px">antonio.sepulveda.calderon1@gmail.com</span>
+          </div>
+          <br>
+
+          <div>
+            <i class='bx bx-phone'></i>
+            <span>+56 9 8850-7263</span>
+          </div>
+          <br>
+
+          <div >
+            <i class='bx bxl-linkedin'></i>
+            <a href="https://www.linkedin.com/in/aasc-574750131/">Linkedin</a>
+          </div>
+          <br>
+
+          <div>
+            <i class='bx bxl-github'></i>
+            <a href="https://www.github.com/antoniosepdev/">GitHub</a>
+          </div>
+
+        </div>
+      </div>
+
   </div>
+  <footer class="footer">
+    <span>Autor: Antonio Sepúlveda.</span><br>
+    <span>
+      &copy;
+      <span id="copyright">
+          <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script> Todos los derechos reservados.
+      </span>
+    </span>
+  </footer>
 
 
   <script>
+      window.onscroll = function() {myFunction()};
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+
     function openNav() {
       document.getElementById("mySidebar").style.width = "250px";
       document.getElementById("main").style.marginLeft = "250px";
@@ -113,9 +291,6 @@
       document.getElementById("mySidebar").style.width = "0";
       document.getElementById("main").style.marginLeft= "0";
     }
-    </script>
-    
-
-
+    </script>  
   </body>
 </html>
