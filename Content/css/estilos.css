@@ -116,7 +116,7 @@ html {
 
 .main {
   padding: 16px;
-  margin-top: 150px;
+  margin-top: 200px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -220,7 +220,7 @@ html {
 .home{
   display:block;
   text-align: center;
-  margin-bottom:200px;
+  margin-bottom:300px;
 }
 
 .home h1{
@@ -238,12 +238,15 @@ html {
 }
 
 .download_CV{
-  width:30%;
+  width:50%;
   display:inline-block;
 }
 
-.bibliografia ,.educacion ,.habilidades ,.proyectos ,.contacto{
+.bibliografia{
   display:block;
+}
+.educacion ,.habilidades ,.proyectos ,.contacto{
+  display: block;
 }
 
 h2{
