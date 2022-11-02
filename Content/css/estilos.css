@@ -245,7 +245,7 @@ html {
 .bibliografia{
   display:block;
 }
-.educacion ,.habilidades ,.proyectos ,.contacto{
+.educacion ,.habilidadestecnicas, .habilidadesblandas ,.proyectos ,.contacto{
   display: block;
 }
 
@@ -266,7 +266,7 @@ h2{
   text-align: center;
 }
 
-.habilidades h2, h3, div{
+.habilidadestecnicas h2, h3, div{
   text-align: center;
 }
 
@@ -340,6 +340,33 @@ h2{
   transition: .5s;
 }
 
+.metodologias .container .box .box-row{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 1rem 80px;
+  font-size: 1.2rem;
+  row-gap: 2rem;
+  align-items: center;
+}
+
+
+.habilidadesblandas .container .box .box-row{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 1rem 80px;
+  font-size: 1.2rem;
+  row-gap: 2rem;
+  align-items: center;
+}
+
 .proyectos .container .box .box-row{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -360,6 +387,12 @@ h2{
   font-size:20px;
   margin-left: 15%;
   margin-right: 15%;
+}
+
+.contenido_cuadro{
+  margin-left: 50px;
+  margin-right: 50px;
+
 }
 
 .cuadro{
@@ -390,5 +423,7 @@ h2{
   width: 300px;
   height: 150px;
   border-radius: 50%;
+
+
 
 }
